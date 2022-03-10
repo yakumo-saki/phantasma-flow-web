@@ -59,4 +59,4 @@ jobs:
           name: "Edge"
           prerelease: true
           body_path: "edge.txt"
-          files: phantasma-flow-web-linux-amd64.tar.gz
+          files: ~/phantasma-flow-web-linux-amd64.tar.gz
