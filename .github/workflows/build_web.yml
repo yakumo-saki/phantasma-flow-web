@@ -1,4 +1,4 @@
-name: Create Release
+name: Create Release (edge)
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
@@ -35,8 +35,8 @@ jobs:
           key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-go-
-      - name: set GOPATH
-        run: 'echo "GOPATH=`pwd`" >> $GITHUB_ENV'
+      #- name: set GOPATH
+      #  run: 'echo "GOPATH=`pwd`" >> $GITHUB_ENV'
       - name: build
         run: cd web && go build -trimpath .
       - name: add date to release body
