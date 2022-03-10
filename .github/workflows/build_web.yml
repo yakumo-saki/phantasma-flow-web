@@ -48,7 +48,7 @@ jobs:
       - name: create release dir
         run: mkdir release
       - name: copy binary to home
-        run: cp web/phantasma-flow-web release/ && cp web/extra web/templates release/
+        run: cp web/phantasma-flow-web release/ && cp -r web/extra web/templates release/
       - name: create tar.gz
         run: cd web && tar czvf phantasma-flow-web-linux-amd64.tar.gz .
       - name: Pre release
