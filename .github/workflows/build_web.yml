@@ -42,7 +42,7 @@ jobs:
       - name: add date to release body
         run: "TZ=JST-9 LANG=C date '+- %Y/%m/%d %H:%M:%S %z' >> edge.txt"
       - name: add git commit-id to release body (web)
-        run: 'cd server && echo `git log -n 1 --pretty=format:"- web: %H"` >> ../edge.txt'
+        run: 'cd web && echo `git log -n 1 --pretty=format:"- web: %H"` >> ../edge.txt'
         
       # -------- BUILD ARTIFACT --------
       - name: create release dir
