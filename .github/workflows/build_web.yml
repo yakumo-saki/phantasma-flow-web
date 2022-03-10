@@ -50,7 +50,7 @@ jobs:
       - name: copy binary to home
         run: cp web/phantasma-flow-web release/ && cp -r web/extra web/templates release/
       - name: create tar.gz
-        run: cd web && tar czvf phantasma-flow-web-linux-amd64.tar.gz .
+        run: cd release && tar czvf ~/phantasma-flow-web-linux-amd64.tar.gz .
       - name: Pre release
         uses: softprops/action-gh-release@v1
         with:
